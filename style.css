@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Color (also uses element selector) */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: hsl(210, 30%, 95%); /* hsl */
@@ -17,6 +18,38 @@ footer {
 
 a {
     color: color-mix(in srgb, blue 70%, white 30%); /* wide gamut */
+}
+
+
+
+section {
+    padding-left: 20px;
+}
+
+/* Relative units */
+body {
+    padding: 2rem;
+}
+
+textarea {
+    width: 50vw;
+}
+
+h3 {
+    font-size: 1.5em; 
+}
+
+/* Absolute units */
+header {
+    padding: 20px;
+}
+
+video {
+    width: 250px;
+}
+
+section {
+    border-width: 2pt; 
 }
 
 
@@ -54,6 +87,17 @@ section {
     border-radius: 10px;
 }
 
+
+/* Text */
+p {
+    text-align: left;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* Display */
 nav li {
     display: inline-block;
@@ -62,6 +106,7 @@ nav li {
 span {
     display: inline;
 }
+
 
 /* Sizing */
 video {
@@ -99,10 +144,20 @@ nav ul {
     gap: 10px;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-group {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Layouts - Grid */
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -114,5 +169,73 @@ main {
 
     nav ul {
         flex-direction: column;
+    }
+}
+
+/* Class Selector */
+.fit-picture {
+    border-radius: 10px;
+}
+
+/* ID Selector */
+#comments {
+    width: 300px;
+}
+
+/* Attribute Selector */
+input[type="radio"] {
+    accent-color: orange;
+}
+
+/* Selector List */
+h1, h2 {
+    color: rgb(44, 62, 80); /* rgb */
+}
+
+
+/*===================
+-----COMBINATORS-----
+===================*/
+
+
+/* Descendant */
+nav ul li {
+    list-style: circle;
+}
+
+/* Child */
+nav > ul {
+    padding-left: 20px;
+}
+
+/* Adjacent sibling */
+h2 + p {
+    color: blue;
+}
+
+/* General sibling */
+h2 ~ p {
+    font-style: italic;
+}
+
+/* Combined selector */
+img.fit-picture {
+    border: 2px solid black;
+}
+
+
+/*===================
+----NEW SELECTORS----
+===================*/
+
+/* :has() */
+section:has(video) {
+    background-color: #eef;
+}
+
+/* Nested selector */
+section {
+    & h3 {
+        color: purple;
     }
 }
