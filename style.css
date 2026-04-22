@@ -90,3 +90,29 @@ button:hover {
 button:active {
     background-color: red;
 }
+
+/* Layouts - Flexbox */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Layouts - Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
