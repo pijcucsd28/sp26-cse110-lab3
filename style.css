@@ -53,3 +53,40 @@ section {
     border-width: 2px;
     border-radius: 10px;
 }
+
+/* Display */
+nav li {
+    display: inline-block;
+}
+
+span {
+    display: inline;
+}
+
+/* Sizing */
+video {
+    height: 250px;
+    width: 250px;
+    max-width: 100%;
+    min-width: 150px;
+}
+
+/* Positionnnnnnn! */
+header {
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    position: relative;
+}
+
+
+/* Pseudo-Classes (*/
+button:hover {
+    background-color: green;
+}
+
+button:active {
+    background-color: red;
+}
